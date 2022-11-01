@@ -1,0 +1,6 @@
+.env
+.env.local
+.idea/
+/vendor
+/framework
+/public/uploads

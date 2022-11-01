@@ -1,0 +1,72 @@
+#!/usr/bin/env php
+<?php
+
+
+define('Laventure', microtime(true));
+
+
+/*
+|--------------------------------------------------------
+|   Autoload dependencies of application
+|--------------------------------------------------------
+*/
+
+
+require_once realpath(__DIR__.'/vendor/autoload.php');
+
+
+
+/*
+|-------------------------------------------------------
+|    Get instance of Application
+|-------------------------------------------------------
+*/
+
+$app = require(__DIR__ . '/bootstrap/app.php');
+
+
+
+/*
+|-------------------------------------------------------
+|    Get instance of Console Kernel
+|-------------------------------------------------------
+*/
+
+$kernel = $app->getConsoleKernel();
+
+
+
+
+/*
+|-------------------------------------------------------
+|    Get status executed command.
+|-------------------------------------------------------
+*/
+
+
+$status = $kernel->handle(
+  $input = new \Laventure\Component\Console\Input\ConsoleInputArgv(),
+  new \Laventure\Component\Console\Output\ConsoleOutput()
+);
+
+
+
+
+/*
+|-------------------------------------------------------
+|    Terminate execution command
+|-------------------------------------------------------
+*/
+
+$kernel->terminate($input, $status);
+
+
+
+
+/*
+|-------------------------------------------------------
+|    Exit status
+|-------------------------------------------------------
+*/
+
+exit($status);

@@ -1,0 +1,40 @@
+{
+  "name": "jeandev84/laventure",
+  "description": "A simple PHP framework for building web application",
+  "keywords": ["framework", "php", "laventure", "laventure-framework"],
+  "type": "library",
+  "license": "MIT",
+  "readme": "",
+  "time": "",
+  "support": {
+    "issues": "https://github.com/jeandev84/laventure-framework/issues",
+    "source": "https://github.com/jeandev84/laventure-framework",
+    "wiki": "https://github.com/jeandev84/laventure-framework/wiki"
+  },
+  "authors": [
+    {
+      "name": "Yao Kouassi Jean-Claude",
+      "email": "jeandev84@yahoo.com",
+      "role": "Developer"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=7.2",
+    "symfony/var-dumper": "^5.3",
+    "ext-pdo": "*",
+    "ext-mysqli": "*",
+    "ext-json": "*",
+    "filp/whoops": "^2.14",
+    "twig/twig": "^3.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/",
+      "Laventure\\": "framework/src"
+    }
+  },
+  "config": {
+    "platform-check": false
+  }
+}
