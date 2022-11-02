@@ -2,7 +2,7 @@
 
 namespace App\Events;
 
-use Laventure\Component\Event\Event;
+use Laventure\Component\Events\Event;
 
 class DemoEvent extends Event
 {

@@ -3,4 +3,6 @@
 .idea/
 /vendor
 /framework
+/temp/cache/framework/*
+/temp/cache/app/*
 /public/uploads

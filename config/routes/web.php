@@ -28,3 +28,7 @@ Route::get('/contact', [\App\Http\Controllers\PageController::class, 'contact'])
 Route::post('/contact', [\App\Http\Controllers\PageController::class, 'send'])
     ->name('send.contact');
 
+
+
+
+Route::resource('demo', 'DemoController');
