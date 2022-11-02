@@ -1,5 +1,5 @@
 <?php
-namespace App\Provider;
+namespace App\Service\Provider;
 
 use Laventure\Foundation\Provider\ApplicationServiceProvider as AppServiceProvider;
 

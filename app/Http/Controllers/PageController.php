@@ -3,12 +3,10 @@ namespace App\Http\Controllers;
 
 
 
-use App\Events\DemoEvent;
 use Laventure\Component\Cache\CacheInterface;
 use Laventure\Component\Http\Request\Request;
 use Laventure\Component\Http\Response\Response;
 use Laventure\Foundation\Http\Controllers\Controller;
-use Laventure\Foundation\Service\Cache\Types\FileCache;
 
 
 /**

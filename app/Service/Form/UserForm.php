@@ -1,5 +1,5 @@
 <?php
-namespace App\Form;
+namespace App\Service\Form;
 
 use Laventure\Component\Helpers\Html\Form\Types\EmailType;
 use Laventure\Component\Helpers\Html\Form\Types\PasswordType;
