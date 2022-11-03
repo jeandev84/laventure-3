@@ -1,8 +1,7 @@
 <?php
-namespace App\Repository;
+namespace App\ORM\Mapper\Repository;
 
-use App\Entity\User;
-use Laventure\Component\Database\ORM\Mapper\Manager\Contact\EntityManagerInterface;
+use App\ORM\Mapper\Entity\User;
 use Laventure\Component\Database\ORM\Mapper\Manager\EntityManager;
 use Laventure\Component\Database\ORM\Mapper\Repository\ServiceRepository;
 

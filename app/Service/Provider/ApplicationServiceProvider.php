@@ -1,7 +1,7 @@
 <?php
 namespace App\Service\Provider;
 
-use Laventure\Foundation\Provider\ApplicationServiceProvider as AppServiceProvider;
+use Laventure\Foundation\Service\Provider\ApplicationServiceProvider as AppServiceProvider;
 
 
 /**

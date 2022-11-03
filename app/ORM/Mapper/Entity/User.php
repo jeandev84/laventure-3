@@ -1,5 +1,5 @@
 <?php
-namespace App\Entity;
+namespace App\ORM\Mapper\Entity;
 
 class User
 {
