@@ -13,7 +13,7 @@ return [
     */
 
     'root'      => 'resources/views',
-    'layout'    => false, // 'layouts/default',
+    'layout'    => false, // 'layouts/default'
     'extension' => false,
     'compress'  =>  false
 ];
