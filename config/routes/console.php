@@ -3,12 +3,17 @@
 use Laventure\Component\Console\Command\Command;
 use Laventure\Foundation\Facade\Console\Schedule;
 
+/*
+|----------------------------------------------------------------------
+|      Registration Commands routes
+|----------------------------------------------------------------------
+*/
 
-Schedule::command('demo', function (Command $command) {
-    $command->description('do something like demo :)');
-});
+/*
+Schedule::command('make:unit', function (Command $command) {
+}, 'some description (make:unit) command');
 
 
-Schedule::command('make:user', function (Command $command) {
-    $command->description('Create a new user .');
-});
+Schedule::command('hello', function (Command $command) {
+}, 'some description for (hello) command');
+*/
