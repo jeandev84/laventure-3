@@ -5,18 +5,17 @@ class User
 {
 
       protected $id;
-
       protected $username;
-
       protected $password;
-
-
-      protected $createdAt;
+      protected $active = true;
+      protected $created_at;
+      protected $updated_at;
 
 
       public function __construct()
       {
-          $this->createdAt = new \DateTime();
+          $this->created_at = new \DateTime();
+          $this->updated_at = new \DateTime();
       }
 
 
@@ -53,5 +52,38 @@ class User
       public function getPassword()
       {
           return $this->password;
+      }
+
+
+
+
+      /**
+       * @param $active
+       * @return void
+      */
+      public function setActive($active)
+      {
+          $this->active = $active;
+      }
+
+
+
+      /**
+       * @return bool
+      */
+      public function isActive(): bool
+      {
+           return $this->active;
+      }
+
+
+
+
+      /**
+       * @return string
+      */
+      public function checked(): string
+      {
+           return $this->active ? " checked" : '';
       }
 }

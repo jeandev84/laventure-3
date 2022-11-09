@@ -15,4 +15,10 @@ Route::get('/', function () {
 });
 
 
+Route::get('/', [\App\Http\Controllers\PageController::class, 'demo']);
+
+
+Route::group(['prefix' => 'admin', 'module' => 'Admin', 'name' => 'admin.'], function () {
+    Route::resource('user', 'UserController');
+});
 

@@ -3,7 +3,10 @@ namespace App\Http\Controllers;
 
 
 
+use App\ORM\Mapper\Entity\User;
 use Laventure\Component\Cache\CacheInterface;
+use Laventure\Component\Database\ORM\Mapper\Manager\EntityManager;
+use Laventure\Component\Encryption\Password\Hash;
 use Laventure\Component\Http\Request\Request;
 use Laventure\Component\Http\Response\Response;
 use Laventure\Foundation\Http\Controllers\Controller;
@@ -50,7 +53,7 @@ class PageController extends Controller
 
          // $this->cache->set('demo', 'Lorem ipsum something very good to cache.', 30);
          // $event = new DemoEvent(); /* dd($event->getName()); */
-         return view('page/index.tpl.php');
+         return view('page/index');
     }
 
 
@@ -63,7 +66,7 @@ class PageController extends Controller
     */
     public function show($id): Response
     {
-        return view('page/show.php', ['id' => $id]);
+        return view('page/show', ['id' => $id]);
     }
 
 
@@ -74,7 +77,7 @@ class PageController extends Controller
     */
     public function contact(): Response
     {
-        return view('page/contact.php');
+        return view('page/contact');
     }
 
 
@@ -101,5 +104,27 @@ class PageController extends Controller
           parse_str($json, $result);
 
           dd($result, $request->request->all());
+    }
+
+
+    /**
+     * @param EntityManager $em
+     * @return Response
+    */
+    public function demo(EntityManager $em): Response
+    {
+         /*
+         $user = new User();
+         $user->setUsername('john')
+              ->setPassword((new Hash())->make('123'));
+
+
+         $em->persist($user);
+         $em->flush();
+         */
+
+        $users = $em->getRepository(User::class)->findAll();
+
+        return view('page/demo', compact('users'));
     }
 }

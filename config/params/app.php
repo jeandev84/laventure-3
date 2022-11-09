@@ -34,11 +34,11 @@ return [
 
     /*
     |------------------------------------------------------------------
-    |   Application Timezone
+    |   Application Timezone [ UTC, Asia/Yekaterinburg, Europe/Moscow, Europe/Paris ... ]
     |------------------------------------------------------------------
     */
 
-    'timezone' => 'UTC', // Asia/Yekaterinburg
+    'timezone' => 'Asia/Yekaterinburg',
 
 
 
